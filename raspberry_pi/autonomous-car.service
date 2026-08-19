@@ -1,0 +1,19 @@
+[Unit]
+Description=Autonomous Car Web Control
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=reda
+WorkingDirectory=/home/reda/self_driving_pfe
+
+ExecStart=/home/reda/self_driving_pfe/venv/bin/python /home/reda/self_driving_pfe/scripts/autonomous_drive_web.py
+
+Restart=on-failure
+RestartSec=5
+
+StandardOutput=append:/home/reda/self_driving_pfe/outputs/run.log
+StandardError=append:/home/reda/self_driving_pfe/outputs/error.log
+
+[Install]
+WantedBy=multi-user.target
