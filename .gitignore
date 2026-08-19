@@ -1,0 +1,26 @@
+# Environnement virtuel
+venv/
+.venv/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Vidéos brutes
+videos/
+
+# Dataset complet
+dataset/images/
+
+# Logs
+outputs/test_logs/
+*.log
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
